@@ -1,3 +1,2 @@
-N, X = map(int,input().split())
-A = ' '.join([i for i in input().split() if int(i) < X])
-print(A)
+X = list(map(int,input().split()))[1]
+print(' '.join([i for i in input().split() if int(i) < X]))
