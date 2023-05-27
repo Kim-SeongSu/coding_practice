@@ -7,6 +7,10 @@ N = int(input())
 G = N - int('999999'[:len(str(N))-1]) if N > 10 else N
 
 for i in range(G,N+1):
+
+
+
++ 반례) N이 29일 때, G는 20부터 시작한다. 하지만 29의 생성자는 19이다
 '''
 
 for i in range(1,N+1):
