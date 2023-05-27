@@ -6,4 +6,4 @@ result = 0
 for i in range(L):
     result += (Alphbet.get(arr[i]))*(31**i)
 
-print(result)
+print(result % 1234567891)
