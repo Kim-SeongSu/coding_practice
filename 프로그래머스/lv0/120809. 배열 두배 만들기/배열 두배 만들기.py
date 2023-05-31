@@ -1,4 +1,2 @@
 def solution(numbers):
-    for i in range(len(numbers)):
-        numbers[i] *= 2
-    return numbers
+    return [n*2 for n in numbers]
