@@ -1,10 +1,5 @@
 def solution(num_list):
     if len(num_list) > 10:
-        answer = 0
-        for i in num_list:
-            answer += i 
+        return eval('+'.join(map(str,num_list)))
     else:
-        answer = 1
-        for i in num_list:
-            answer *= i
-    return answer
+        return eval('*'.join(map(str,num_list)))
