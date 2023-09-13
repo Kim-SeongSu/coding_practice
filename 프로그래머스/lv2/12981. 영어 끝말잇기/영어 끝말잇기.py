@@ -1,9 +1,5 @@
 def solution(n, words):
-    arr = [words[0]]
-    
-    for i,v in enumerate(words[1:],1):
-        if arr[-1][-1] == v[0] and v not in arr and len(v) > 1:
-            arr.append(v)
-        else:
-            return i%n+1, i//n+1
+    for i in range(1,len(words)):
+        if words[i-1][-1] != words[i][0] or words[i] in words[:i]: 
+            return [i%n+1 , i//n+1]
     return [0,0]
