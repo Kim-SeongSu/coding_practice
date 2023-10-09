@@ -1,24 +1,25 @@
 import sys
 
-n, m, b= map(int, sys.stdin.readline().split())
-arr = [list(map(int, sys.stdin.readline().split())) for _ in range(n)]
+N = int(sys.stdin.readline())
 
-t, h = 9999999999999, 0
+connect, not_connect, temp = set(), set(), set()
 
-for i in range(257):
-    plus, minus = 0, 0
-    for j in range(n):
-        for k in range(m):
-            if arr[j][k] < i:
-                minus += i - arr[j][k]
-            else:
-                plus += arr[j][k] - i
+for _ in range(int(sys.stdin.readline())):
+    a,b = sorted(map(int,sys.stdin.readline().split()))
     
-    if plus + b >= minus:
-        if 2 * plus + minus <= t:
-            t = 2 * plus + minus
-            h = i
+    if a == 1:
+        connect.add(b)
+    elif a in connect or b in connect:
+        connect |= set([a,b])
+    elif a in not_connect or b in not_connect:
+        not_connect |= set([a,b])
     else:
-        continue
+        temp |= set([a,b])
 
-print(t,h)
+
+    if len(temp & not_connect) > 0:
+        not_connect |= temp
+    elif len(temp & connect) > 0:
+        connect |= temp
+
+print(len(connect))
