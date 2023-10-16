@@ -1,25 +1,15 @@
+# 시간초과
 import sys
 
-N = int(sys.stdin.readline())
+n = int(sys.stdin.readline())
+arr = [i**2 for i in range(int(n**0.5)+1)]
+result = []
 
-connect, not_connect, temp = set(), set(), set()
+for i in arr:
+    for j in arr:
+        for k in arr:
+            for l in arr:
+                if i+j+k+l == n:
+                    result.append(4-[i,j,k,l].count(0))
 
-for _ in range(int(sys.stdin.readline())):
-    a,b = sorted(map(int,sys.stdin.readline().split()))
-    
-    if a == 1:
-        connect.add(b)
-    elif a in connect or b in connect:
-        connect |= set([a,b])
-    elif a in not_connect or b in not_connect:
-        not_connect |= set([a,b])
-    else:
-        temp |= set([a,b])
-
-
-    if len(temp & not_connect) > 0:
-        not_connect |= temp
-    elif len(temp & connect) > 0:
-        connect |= temp
-
-print(len(connect))
+print(min(result))
