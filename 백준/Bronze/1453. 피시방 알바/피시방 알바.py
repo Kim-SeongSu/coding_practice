@@ -1,0 +1,1 @@
+print(int(input())-len(list(set(map(int,input().split())))))
