@@ -1,0 +1,2 @@
+<!-- sql 확장자 인식 -->
+*.sql linguist-detectable=true
