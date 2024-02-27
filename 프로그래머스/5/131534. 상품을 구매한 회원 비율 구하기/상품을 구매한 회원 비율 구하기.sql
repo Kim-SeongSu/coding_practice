@@ -1,0 +1,12 @@
+WITH U2021 AS (SELECT USER_ID
+                FROM USER_INFO
+                WHERE JOINED LIKE '2021%')
+
+SELECT YEAR(O.SALES_DATE) YEAR, 
+       MONTH(O.SALES_DATE) MONTH, 
+       COUNT(distinct O.user_id) PUCHASED_USERS, 
+       ROUND(COUNT(distinct O.user_id)/ (SELECT count(*) from U2021), 1) PUCHASED_RATIO
+FROM ONLINE_SALE O
+WHERE O.user_id in (SELECT * FROM U2021)
+GROUP BY 1 ,2
+ORDER BY 1, 2
