@@ -1,0 +1,7 @@
+select A.ID, A.GENOTYPE, B.PARENT_GENOTYPE
+from ECOLI_DATA A
+    left join ( select ID, GENOTYPE PARENT_GENOTYPE
+                from ECOLI_DATA ) B
+    on A.PARENT_ID = B.ID
+where A.GENOTYPE & B.PARENT_GENOTYPE = B.PARENT_GENOTYPE
+order by 1
