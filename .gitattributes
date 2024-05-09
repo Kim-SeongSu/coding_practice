@@ -1,2 +1,3 @@
-<!-- sql 확장자 인식 -->
+<!-- sql, java 확장자 인식 -->
 *.sql linguist-detectable=true
+*.java linguist-detectable=true
