@@ -1,3 +1,6 @@
-<!-- sql, java 확장자 인식 -->
-*.sql linguist-detectable=true
-*.java linguist-detectable=true
+* linguist-vendored
+    *.sql linguist-vendored=false
+    *.java linguist-vendored=false
+    *.py linguist-vendored=false
+    *.PLpgSQL linguist-vendored=false
+    *.Text linguist-vendored=false
