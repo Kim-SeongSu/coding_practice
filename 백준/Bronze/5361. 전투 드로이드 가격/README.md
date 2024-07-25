@@ -18,27 +18,27 @@
 
 <p>상근이는 망가진 전투 드로이드를 고치려고 하고 있다. 전투 드로이드의 각 부품의 가격은 다음과 같다.</p>
 
-<table class="table table-bordered" style="width: 40%; margin-left: 0px; margin-right: 0px;">
+<table class="table table-bordered" style="width:40%">
 	<tbody>
 		<tr>
 			<th style="width:20%">블래스터 라이플</th>
-			<td style="width:20%">\$350.34</td>
+			<td style="width:20%"><span>$</span>350.34</td>
 		</tr>
 		<tr>
 			<th>시각 센서</th>
-			<td>\$230.90</td>
+			<td><span>$</span>230.90</td>
 		</tr>
 		<tr>
 			<th>청각 센서</th>
-			<td>\$190.55</td>
+			<td><span>$</span>190.55</td>
 		</tr>
 		<tr>
 			<th>팔</th>
-			<td>\$125.30</td>
+			<td><span>$</span>125.30</td>
 		</tr>
 		<tr>
 			<th>다리</th>
-			<td>\$180.90</td>
+			<td><span>$</span>180.90</td>
 		</tr>
 	</tbody>
 </table>
